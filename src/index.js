@@ -1,4 +1,5 @@
 import mapboxgl from "mapbox-gl";
+import makeMarker from "./marker.js"
 
 mapboxgl.accessToken = "pk.eyJ1IjoiYXZzY2hpZmYiLCJhIjoiY2tmd3JlNmlyMWZ5MDJybTYwN2V1ZmZzeSJ9.q5FObDMUmi0ULhnmG2j7EQ"
 
@@ -14,3 +15,5 @@ markerDomEl.style.width = "32px";
 markerDomEl.style.height = "39px";
 markerDomEl.style.backgroundImage = "url(http://i.imgur.com/WbMOfMl.png)";
 const mapMarker = new mapboxgl.Marker(markerDomEl).setLngLat([-74.009151, 40.705086]).addTo(map)
+
+makeMarker(map, "restaurant", [-73.9715, 40.7750]);
